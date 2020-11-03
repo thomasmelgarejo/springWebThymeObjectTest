@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>CheckBox</title>
+</head>
+<body>
+<h1> CheckBoks test</h1>
+<br>
+
+    <form action="/checkbox" method="post" th:object="${person}">
+        <label>Titel?</label>
+        <input type="checkbox" th:field="*{gift}" /><br/>
+    <form>
+</body>
+</html>
