@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>BulletList</title>
+</head>
+<body>
+<h1>BulletList</h1>
+<form action="/bulletlist" method="get" th:object="${person}">
+    <ul th:each="tempLine: ${titler}">
+        <li th:text="${tempLine}">sdfgsdfgsdfg</li>
+    </ul>
+</form>
+</body>
+</html>

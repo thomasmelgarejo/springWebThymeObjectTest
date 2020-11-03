@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>RadioButton</title>
+</head>
+<body>
+<h1>RadioButto</h1>
+
+<label>Gender:</label>
+<form method="post" th:action="@{/radiobutton}" th:object="${person}">
+    <input type="radio" th:field="*{titel}" value="Konge" />Konge
+    <input type="radio" th:field="*{titel}" value="Prins" />Prins<br/>
+    <input type="submit" value="videre">
+</form>
+
+<span>Profession:</span><span th:text="${person.titel}"></span><br/>
+</body>
+</html>

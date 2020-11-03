@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropbox test</title>
+</head>
+<body>
+    <h1>Dropbox test</h1>
+
+    <label>Profession:</label>
+        <form method="post" action="/dropbox" th:object="${person}">
+               <select th:field="*{titel}">
+               <option th:each="p : ${listTitler}" th:value="${p}" th:text="${p}" />
+            </select>
+
+            <input type="submit" value="videre">
+
+        </form>
+
+    <span>Profession:</span><span th:text="${person.titel}"></span><br/>
+</body>
+</html>
